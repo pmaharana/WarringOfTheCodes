@@ -1,0 +1,9 @@
+C:\Users\prana\tiy\codewars\WarringOfTheCodes\WarringOfTheCodes\bin\Debug\netcoreapp1.1\WarringOfTheCodes.deps.json
+C:\Users\prana\tiy\codewars\WarringOfTheCodes\WarringOfTheCodes\bin\Debug\netcoreapp1.1\WarringOfTheCodes.runtimeconfig.json
+C:\Users\prana\tiy\codewars\WarringOfTheCodes\WarringOfTheCodes\bin\Debug\netcoreapp1.1\WarringOfTheCodes.runtimeconfig.dev.json
+C:\Users\prana\tiy\codewars\WarringOfTheCodes\WarringOfTheCodes\bin\Debug\netcoreapp1.1\WarringOfTheCodes.dll
+C:\Users\prana\tiy\codewars\WarringOfTheCodes\WarringOfTheCodes\bin\Debug\netcoreapp1.1\WarringOfTheCodes.pdb
+C:\Users\prana\tiy\codewars\WarringOfTheCodes\WarringOfTheCodes\obj\Debug\netcoreapp1.1\WarringOfTheCodes.csprojResolveAssemblyReference.cache
+C:\Users\prana\tiy\codewars\WarringOfTheCodes\WarringOfTheCodes\obj\Debug\netcoreapp1.1\WarringOfTheCodes.AssemblyInfo.cs
+C:\Users\prana\tiy\codewars\WarringOfTheCodes\WarringOfTheCodes\obj\Debug\netcoreapp1.1\WarringOfTheCodes.dll
+C:\Users\prana\tiy\codewars\WarringOfTheCodes\WarringOfTheCodes\obj\Debug\netcoreapp1.1\WarringOfTheCodes.pdb

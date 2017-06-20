@@ -41,11 +41,6 @@ namespace WarringOfTheCodes
             }
         }
 
-
-
-
-
-
         public static string FizzBuzz(string sentence)
         {
             var rv = String.Empty;
@@ -78,13 +73,6 @@ namespace WarringOfTheCodes
 
             return rv;
         }
-
-
-
-
-
-
-
 
 
         public static bool XO(string input)
@@ -261,109 +249,37 @@ namespace WarringOfTheCodes
             return rv;
         }
 
+        //COVFEFE - https://www.codewars.com/kata/covfefe/train/csharp
         public static string Covfefe(string tweet)
         {
-
-            return tweet;
-
+            return (tweet.Contains("coverage") ? tweet : tweet + " covfefe").Replace("coverage", "covfefe");
         }
+
 
 
         static void Main(string[] args)
         {
+            var helper = new PagnationHelper<char>(new List<char> { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' }, 3);
 
-            //var input = Console.ReadLine().Split(' ').Select(s => long.Parse(s));
-            //input.Reverse();
-            //var min = input.Sum() - input.Max();
-            //var max = input.Sum() - input.Min();
-            //Console.WriteLine($"{min} {max}");
+            
 
-            //string s = Console.ReadLine();
-            //int count = 1;
-            //for (int i = 0; i < s.Length; i++)
-            //{
-            //    if (char.IsUpper(s[i]))
-            //    {
-            //        count++;
-            //    }
-            //}
-            //Console.WriteLine(count);
+            Console.WriteLine(helper.PageItemCount(3));
 
-            //string s = Console.ReadLine();
-            //int count = 1;
-            //var answer = s.Count(i => char.IsUpper(i));
-
-            //var neya = int.Parse(Console.ReadLine());
-
-            //var answer = (neya < 0) ? "negative" : "positibe";
-            //Console.WriteLine(answer);
-
-            //char ar = 'a';
-            //var art = ar++;
-            //Console.WriteLine(art++);
-            //Console.WriteLine(art++);
-            //Console.WriteLine(art++);
-            //Console.WriteLine(art++);
-
-
-            //int n = Convert.ToInt32(Console.ReadLine());
-            //string s = Console.ReadLine();
-            //int k = Convert.ToInt32(Console.ReadLine());
-
-            ////var answer = s.Select(o => o++).Where(w ;
-            //var newAnswer = "";
-            ////Console.WriteLine(newAnswer);
-
-            //for (int i = 0; i < s.Length; i++)
-            //{
-            //    newAnswer += i++;
-
-            //}
-
-            //Console.WriteLine(newAnswer);
-
-            //var result = XO("xoxoxo");
-            //Console.WriteLine(result);
-
-
-            ////Code Kata TIY Fizz Buzz
-            //var result = FizzBuzz("A");
-            //Console.WriteLine(result);
-
-
-
-            ////Hacker Rank Pangram
-            //Console.WriteLine(Pangram("We promptly judged antique ivory buckles for the next prize"));
-
-            //string hel = "two words";
-            //Console.WriteLine(hel.Substring(0, 4) + hel.Substring(4, 1).ToUpper() + hel.Substring(4 + 1));
-
-            //var rv = wave("two cord");
-            //rv.ForEach(f => Console.WriteLine(f));
-
-
-            //string qv = "lettha me testu thisu";
-            //var i = qv.Split(' ').ToList();
-            //var rv3 = new List<string>();
-
-            //for (int z = 0; z < i.Count; z++)
-            //{
-            //    string rv = "";
-            //    i[z].Substring(1, i[z].Length - 2).Reverse().ToList().ForEach(x => rv += x.ToString());
-            //    string rv2 = i[z].Substring(0, 1) + rv + i[z].Substring(i[z].Length - 1);
-            //    rv3.Add(rv2);
-            //}
-            //string rv4 = String.Join(" ", rv3);
-
-            //Console.WriteLine(rv4);
-
-            //string trydis = "inner";
-            //var lmao = "";
-            //trydis.ToList().OrderByDescending(o => o).ToList().ForEach(x => lmao += x);
-            //Console.WriteLine(lmao);
 
 
 
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
