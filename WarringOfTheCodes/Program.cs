@@ -259,14 +259,7 @@ namespace WarringOfTheCodes
 
         static void Main(string[] args)
         {
-            var helper = new PagnationHelper<char>(new List<char> { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' }, 3);
-
-            
-
-            Console.WriteLine(helper.PageItemCount(3));
-
-
-
+            Console.WriteLine(Orpheus.IsEven(4));
 
         }
     }
