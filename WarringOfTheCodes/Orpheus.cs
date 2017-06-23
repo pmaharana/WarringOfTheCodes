@@ -44,5 +44,36 @@ namespace WarringOfTheCodes
                 return false;
             }
         }
+
+        //Sum of all even Fabiconni numbers whose value is less than 4 mil.
+        public static int SumOfEvenFabs()
+        {
+            int iCount = 2;
+            int fabNum = 0;
+            List<int> seqList = new List<int> { 1, 2 };
+
+
+            do
+            {
+                fabNum = seqList[iCount - 1] + seqList[iCount - 2];
+                seqList.Add(fabNum);
+                iCount++;
+
+            } while (fabNum < 4000000);
+
+            var rv = 0;
+            seqList.RemoveAt(seqList.Count - 1);
+            //seqList.ForEach(f => Console.Write(f + " "));
+            List<int> evenFabs = new List<int>();
+            foreach (var x in seqList)
+            {
+                if (x % 2 == 0)
+                {
+                    evenFabs.Add(x);
+                }
+            }
+            return rv;
+        }
+
     }
 }

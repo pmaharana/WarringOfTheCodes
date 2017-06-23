@@ -259,7 +259,20 @@ namespace WarringOfTheCodes
 
         static void Main(string[] args)
         {
-            Console.WriteLine(Orpheus.IsEven(4));
+            var sumz = new List<int>();
+            for (int i = 0; i < 1000; i++)
+            {
+                if ((i % 3 == 0) || (i % 5 == 0))
+                {
+                    sumz.Add(i);
+                }
+            }
+
+            
+            
+            Console.WriteLine(evenFabs.Sum());
+
+
 
         }
     }
