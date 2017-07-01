@@ -255,25 +255,60 @@ namespace WarringOfTheCodes
             return (tweet.Contains("coverage") ? tweet : tweet + " covfefe").Replace("coverage", "covfefe");
         }
 
+        public static bool CalcIsPrime(int number)
+        {
 
+            if (number == 1) return false;
+            if (number == 2) return true;
+
+            if (number % 2 == 0) return false; // Even number     
+
+            for (int i = 2; i < number; i++)
+            { // Advance from two to include correct calculation for '4'
+                if (number % i == 0) return false;
+            }
+
+            return true;
+
+        }
 
         static void Main(string[] args)
         {
-            var sumz = new List<int>();
-            for (int i = 0; i < 1000; i++)
-            {
-                if ((i % 3 == 0) || (i % 5 == 0))
-                {
-                    sumz.Add(i);
-                }
-            }
-
-            
-            
-            Console.WriteLine(evenFabs.Sum());
+            //var sumz = new List<int>();
+            //for (int i = 0; i < 1000; i++)
+            //{
+            //    if ((i % 3 == 0) || (i % 5 == 0))
+            //    {
+            //        sumz.Add(i);
+            //    }
+            //}
 
 
 
+            ////largest prime number check, doesnt work with super big numbers
+            //List<int> factorList = new List<int>();
+            //long primeTest = 600851475143;
+            //for (int i = 2; i < primeTest; i++)
+            //{
+            //    if (primeTest % i == 0)
+            //    {
+            //        factorList.Add(i);
+            //    }
+            //}
+            //List<long> primeList = new List<long>();
+
+            //foreach (var number in factorList)
+            //{
+            //    if (CalcIsPrime(number) == true)
+            //    {
+            //        primeList.Add(number);
+            //    }
+            //}
+
+            //Console.WriteLine(primeList.Max());
+
+            Console.WriteLine(Orpheus.DescendingOrder(19371));
+           
         }
     }
 }

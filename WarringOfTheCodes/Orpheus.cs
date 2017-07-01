@@ -75,5 +75,26 @@ namespace WarringOfTheCodes
             return rv;
         }
 
+        public static IEnumerable<string> FriendOrFoe(string[] names)
+        {
+            return names.Where(w => w.Length == 4).ToArray();
+
+            //This also works
+            //public static IEnumerable<string> FriendOrFoe(string[] names) => names.Where(o => o.Length == 4);
+        }
+
+        public static string HoopCount(int n)
+        {
+            return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it";
+        }
+
+        public static int DescendingOrder(int num)
+        {
+            var digits = num.ToString().Select(t => int.Parse(t.ToString())).ToList().OrderByDescending(o => o).ToList();
+            string rv = "";
+            digits.ForEach(f => rv += f);
+            return int.Parse(rv);
+            
+        }
     }
 }
