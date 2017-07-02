@@ -96,5 +96,62 @@ namespace WarringOfTheCodes
             return int.Parse(rv);
             
         }
+
+        public static string GetRectangleStringTest(int width, int height)
+        {
+            string rv = "";
+            string space = "";
+            for (int s = 0; s < width - 2; s++)
+            {
+                space += " ";
+            }
+            for (int i = 0; i < height; i++)
+            {
+                if (i == 0 || i == height -1)
+                {
+                    for (int j = 0; j < width; j++)
+                    {
+
+                        rv += "*";
+                    }
+                }
+                else
+                {
+                    rv += "*" + space + "*";
+
+                }
+
+
+                    
+                rv += "\r\n";
+            }
+            return rv;
+        }
+
+        public static string GetRectangleString(int width, int height)
+        {
+            string rv = "";
+           
+            for (int i = 0; i < height; i++)
+            {
+                if (i == 0 || i == height -1)
+                {
+
+                rv += new String('*', width) + "\r\n";
+                }
+                else
+                {
+                    rv += "*" + new String(' ', width - 2) + "*" + "\r\n";
+                }
+            }
+            return rv;
+        }
+
+        public static string GetRectangleStringDeux(int width, int height)
+        {
+            if (width == 1) return string.Join("", Enumerable.Repeat("*\r\n", height));
+            if (width == 2) return string.Join("", Enumerable.Repeat("**\r\n", height));
+            return new String('*', width) + "\r\n" + string.Join("", Enumerable.Repeat("*" + new String(' ', width - 2) + "*\r\n", height - 2)) + new String('*', width) + "\r\n";
+        }
     }
 }

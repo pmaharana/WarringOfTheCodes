@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace WarringOfTheCodes
 {
@@ -307,8 +308,8 @@ namespace WarringOfTheCodes
 
             //Console.WriteLine(primeList.Max());
 
-            Console.WriteLine(Orpheus.DescendingOrder(19371));
-           
+            Console.WriteLine(Orpheus.GetRectangleStringDeux(7, 5));
+
         }
     }
 }
