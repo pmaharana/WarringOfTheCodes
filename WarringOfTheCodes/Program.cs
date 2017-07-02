@@ -308,8 +308,21 @@ namespace WarringOfTheCodes
 
             //Console.WriteLine(primeList.Max());
 
-            Console.WriteLine(Orpheus.GetRectangleStringDeux(7, 5));
+            //string input = "I I I I\n I I I \n  I I \n   I";
+            //var indices = new List<int>();
+            //for (int i = 0; i < input.Length; i++)
+            //{
+            //    if (input[i] == 'I')
+            //    {
+            //        indices.Add(i);
+            //    }
+            //}
+            //var myArray = input.ToCharArray();
+            //myArray[indices[4]] = ' ';
+            //input = new string(myArray);
+            //Console.WriteLine(input);
 
+            Console.WriteLine(Izanagi.BowlingPins(new int[] { 7, 9, 10 }));
         }
     }
 }
