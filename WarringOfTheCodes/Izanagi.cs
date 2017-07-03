@@ -53,10 +53,50 @@ namespace WarringOfTheCodes
             return new string(myArray);
         }
 
+        public static string Maskify(string cc)
+        {
+            var rv = cc.ToCharArray();
+            for (int i = 0; i < rv.Length - 4; i++)
+            {
+                rv[i] = '#';
+            }
+            return new string(rv);
 
-           
+            //another answer => return cc.Length > 4 ? cc.Substring(cc.Length - 4).PadLeft(cc.Length, '#') : cc;
 
+        }
 
+        public int lostSheep(int[] friday, int[] saturday, int total)
+        {
+            return total - friday.Sum() - saturday.Sum();
+        }
+
+        public static int Find(int[] integers)
+        {
+            int oddCount = 0;
+            int evenCount = 0;
+            foreach (var x in integers)
+            {
+                if (x % 2 == 0)
+                {
+                    evenCount++;
+                }
+                else
+                {
+                    oddCount++;
+                }
+            }
+
+            return evenCount > 1 ? integers.ToList().First(f => f % 2 != 0) : integers.ToList().First(f => f % 2 == 0);
+        }
+
+        public static bool matchingPlates(char[] meals, char[] stack)
+        {
+
+            return meals.SequenceEqual(stack.Take(meals.Length));
+        }
+
+       
 
     }
 }

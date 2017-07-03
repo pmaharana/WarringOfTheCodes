@@ -256,7 +256,7 @@ namespace WarringOfTheCodes
             return (tweet.Contains("coverage") ? tweet : tweet + " covfefe").Replace("coverage", "covfefe");
         }
 
-        public static bool CalcIsPrime(int number)
+        public static bool CalcIsPrime(long number)
         {
 
             if (number == 1) return false;
@@ -264,7 +264,7 @@ namespace WarringOfTheCodes
 
             if (number % 2 == 0) return false; // Even number     
 
-            for (int i = 2; i < number; i++)
+            for (long i = 2; i < number; i++)
             { // Advance from two to include correct calculation for '4'
                 if (number % i == 0) return false;
             }
@@ -287,42 +287,30 @@ namespace WarringOfTheCodes
 
 
             ////largest prime number check, doesnt work with super big numbers
-            //List<int> factorList = new List<int>();
-            //long primeTest = 600851475143;
-            //for (int i = 2; i < primeTest; i++)
-            //{
-            //    if (primeTest % i == 0)
-            //    {
-            //        factorList.Add(i);
-            //    }
-            //}
-            //List<long> primeList = new List<long>();
+            List<long> factorList = new List<long>();
+            long primeTest = 600851475143;
+            for (long i = 2; i < primeTest; i++)
+            {
+                if (primeTest % i == 0)
+                {
+                    factorList.Add(i);
+                }
+            }
+            List<long> primeList = new List<long>();
 
-            //foreach (var number in factorList)
-            //{
-            //    if (CalcIsPrime(number) == true)
-            //    {
-            //        primeList.Add(number);
-            //    }
-            //}
+            foreach (var number in factorList)
+            {
+                if (CalcIsPrime(number) == true)
+                {
+                    primeList.Add(number);
+                }
+            }
 
-            //Console.WriteLine(primeList.Max());
+            Console.WriteLine(primeList.Max());
 
-            //string input = "I I I I\n I I I \n  I I \n   I";
-            //var indices = new List<int>();
-            //for (int i = 0; i < input.Length; i++)
-            //{
-            //    if (input[i] == 'I')
-            //    {
-            //        indices.Add(i);
-            //    }
-            //}
-            //var myArray = input.ToCharArray();
-            //myArray[indices[4]] = ' ';
-            //input = new string(myArray);
-            //Console.WriteLine(input);
+            Console.ReadLine();
 
-            Console.WriteLine(Izanagi.BowlingPins(new int[] { 7, 9, 10 }));
+
         }
     }
 }
