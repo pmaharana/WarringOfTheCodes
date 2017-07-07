@@ -275,40 +275,34 @@ namespace WarringOfTheCodes
 
         static void Main(string[] args)
         {
-            //var sumz = new List<int>();
-            //for (int i = 0; i < 1000; i++)
-            //{
-            //    if ((i % 3 == 0) || (i % 5 == 0))
-            //    {
-            //        sumz.Add(i);
-            //    }
-            //}
 
 
 
             ////largest prime number check, doesnt work with super big numbers
-            List<long> factorList = new List<long>();
-            long primeTest = 600851475143;
-            for (long i = 2; i < primeTest; i++)
-            {
-                if (primeTest % i == 0)
-                {
-                    factorList.Add(i);
-                }
-            }
-            List<long> primeList = new List<long>();
+            //List<long> factorList = new List<long>();
+            //long primeTest = 600851475143;
+            //for (long i = 2; i < primeTest; i++)
+            //{
+            //    if (primeTest % i == 0)
+            //    {
+            //        factorList.Add(i);
+            //    }
+            //}
+            //List<long> primeList = new List<long>();
 
-            foreach (var number in factorList)
-            {
-                if (CalcIsPrime(number) == true)
-                {
-                    primeList.Add(number);
-                }
-            }
+            //foreach (var number in factorList)
+            //{
+            //    if (CalcIsPrime(number) == true)
+            //    {
+            //        primeList.Add(number);
+            //    }
+            //}
 
-            Console.WriteLine(primeList.Max());
+            //Console.WriteLine(primeList.Max());
 
-            Console.ReadLine();
+            //Console.ReadLine();
+
+            Console.WriteLine(Izanagi.DuplicateEncode("(( @"));
 
 
         }

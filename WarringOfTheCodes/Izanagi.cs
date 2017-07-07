@@ -96,7 +96,28 @@ namespace WarringOfTheCodes
             return meals.SequenceEqual(stack.Take(meals.Length));
         }
 
-       
+        public static string bonus_time(int salary, bool bonus)
+        {
+            return bonus ? "$" + (salary * 10) : "$" + salary;
+        }
+
+        public static string DuplicateEncode(string word)
+        {
+            string rv = "";
+            var input = word.ToLower();
+            foreach (var letter in input)
+            {
+                if (input.Count(c => c == letter) > 1)
+                {
+                    rv += ")";
+                }
+                else
+                {
+                    rv += "(";
+                }
+            }
+            return rv;
+        }
 
     }
 }
