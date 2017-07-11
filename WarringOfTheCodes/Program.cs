@@ -306,9 +306,13 @@ namespace WarringOfTheCodes
             //Console.WriteLine((decimal)neg/n);
             //Console.WriteLine((decimal)zero/n);
 
-            Console.WriteLine(Arsene.AlphabetWar("cd"));
+            var testing = Arsene.Tribonacci(new double[] { 1, 1, 1 }, 10);
+            foreach (var item in testing)
+            {
+                Console.Write($"{item} ");
+            }
+          
             Console.ReadLine();
-
         }
     }
 }

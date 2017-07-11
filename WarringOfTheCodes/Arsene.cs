@@ -12,8 +12,6 @@ namespace WarringOfTheCodes
             return A.Distinct().Min(x => B.Count(y => y == x) / A.Count(z => z == x));
         }
 
-
-
         public static string AlphabetWar(string fight)
         {
             string input = fight.ToLower();
@@ -81,6 +79,76 @@ namespace WarringOfTheCodes
                 return "Let's fight again!";
             }
             
+        }
+
+        public static string AlphabetWarU(string fight)
+        {
+            var left = new Dictionary<char, int>() { { 'w', 4 }, { 'p', 3 }, { 'b', 2 }, { 's', 1 } };
+            var right = new Dictionary<char, int>() { { 'm', 4 }, { 'q', 3 }, { 'd', 2 }, { 'z', 1 } };
+            var rightScore = 0;
+            var leftScore = 0;
+            var bombIdx = new List<int>();
+            for (int i = 0; i < fight.Length; i++)
+            {
+                var letter = fight[i];
+                if (letter == '*') bombIdx.Add(i);
+            }
+            var str = fight.ToCharArray();
+            foreach (int idx in bombIdx)
+            {
+                str[idx] = '_';
+                if (idx > 0) str[idx - 1] = '_';
+                if (idx < str.Length - 1) str[idx + 1] = '_';
+            }
+            fight = new string(str);
+            for (int i = 0; i < fight.Length; i++)
+            {
+                var letter = fight[i];
+                if (left.ContainsKey(letter)) leftScore += left[letter];
+                if (right.ContainsKey(letter)) rightScore += right[letter];
+
+            }
+            if (rightScore > leftScore) return "Right side wins!";
+            if (rightScore < leftScore) return "Left side wins!";
+            return "Let's fight again!";
+        }
+
+        public static double[] Tribonacci(double[] signature, int n)
+        {
+            var rv = new List<double>();
+            if (n == 0)
+            {
+                rv.Add(0.0);
+
+            }
+            else
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    if (i < 3)
+                    {
+                        rv.Add(signature[i]);
+                    }
+                    else
+                    {
+                        rv.Add(rv[i - 1] + rv[i - 2] + rv[i - 3]);
+                    }
+
+                }
+            } 
+          
+            return rv.ToArray();
+        }
+
+        public double[] TribonacciU(double[] s, int n)
+        {
+            double[] res = new double[n];
+            Array.Copy(s, res, Math.Min(3, n));
+
+            for (int i = 3; i < n; i++)
+                res[i] = res[i - 3] + res[i - 2] + res[i - 1];
+
+            return n == 0 ? new double[] { 0 } : res;
         }
 
     }
