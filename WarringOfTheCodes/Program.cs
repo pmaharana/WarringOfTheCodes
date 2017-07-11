@@ -275,11 +275,39 @@ namespace WarringOfTheCodes
 
         static void Main(string[] args)
         {
-            Console.WriteLine(Arsene.stringsconstruction("abc", "abcbaccab"));
+
+            //int n = Convert.ToInt32(Console.ReadLine());
+            //int[][] a = new int[n][];
+            //for (int a_i = 0; a_i < n; a_i++)
+            //{
+            //    string[] a_temp = Console.ReadLine().Split(' ');
+            //    a[a_i] = a_temp.Select(s => Int32.Parse(s)).ToArray();
+            //}
+
+            //var primary = 0;
+            //var secondary = 0;
+            //for (int i = 0; i < n; i++)
+            //{
+            //    primary += a[i][i];
+            //    secondary += a[i][n - (i + 1)];
+
+            //}
+            //var rv = Math.Abs(primary - secondary);
+
+            int n = Convert.ToInt32(Console.ReadLine());
+            string[] arr_temp = Console.ReadLine().Split(' ');
+            int[] arr = arr_temp.Select(s => Int32.Parse(s)).ToArray();
+
+            int pos = arr.Count(c => c > 0);
+            int neg = arr.Count(c => c < 0);
+            int zero = n - pos - neg;
+
+            Console.WriteLine((decimal)pos/n);
+            Console.WriteLine((decimal)neg/n);
+            Console.WriteLine((decimal)zero/n);
 
 
-
-
+            Console.ReadLine();
 
         }
     }
