@@ -294,19 +294,19 @@ namespace WarringOfTheCodes
             //}
             //var rv = Math.Abs(primary - secondary);
 
-            int n = Convert.ToInt32(Console.ReadLine());
-            string[] arr_temp = Console.ReadLine().Split(' ');
-            int[] arr = arr_temp.Select(s => Int32.Parse(s)).ToArray();
+            //int n = Convert.ToInt32(Console.ReadLine());
+            //string[] arr_temp = Console.ReadLine().Split(' ');
+            //int[] arr = arr_temp.Select(s => Int32.Parse(s)).ToArray();
 
-            int pos = arr.Count(c => c > 0);
-            int neg = arr.Count(c => c < 0);
-            int zero = n - pos - neg;
+            //int pos = arr.Count(c => c > 0);
+            //int neg = arr.Count(c => c < 0);
+            //int zero = n - pos - neg;
 
-            Console.WriteLine((decimal)pos/n);
-            Console.WriteLine((decimal)neg/n);
-            Console.WriteLine((decimal)zero/n);
+            //Console.WriteLine((decimal)pos/n);
+            //Console.WriteLine((decimal)neg/n);
+            //Console.WriteLine((decimal)zero/n);
 
-
+            Console.WriteLine(Arsene.AlphabetWar("cd"));
             Console.ReadLine();
 
         }
