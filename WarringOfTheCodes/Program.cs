@@ -373,7 +373,7 @@ namespace WarringOfTheCodes
 
             //Console.ReadLine();
 
-            Console.WriteLine(Thanatos.super_reduced_string("baab"));
+            Console.WriteLine(Thanatos.HackerRankInString("shereiamstackerranksystem"));
         }
     }
 }

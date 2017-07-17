@@ -31,13 +31,36 @@ namespace WarringOfTheCodes
         public static string super_reduced_string(string s)
         {
             string toCheck = "(.)\\1";
-            var rv = "";
-            while (s.Contains(toCheck))
+            var rv = s;
+            while (Regex.IsMatch(rv, toCheck))
             {
 
-            rv = Regex.Replace(s, toCheck, "");
+            rv = Regex.Replace(rv, toCheck, "");
             }
             return rv.Length > 0 ? rv : "Empty String";
         }
+
+       public static string HackerRankInString(string s)
+        {
+            var x = s.ToLower();
+            var check = "hackerrank".ToList();
+            string rv = "";
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (check.Count> 0)
+                {
+                    if (x[i] == check[0])
+                    {
+                        rv += x[i];
+                        check.RemoveAt(0);
+                    }
+                }
+            }
+            return rv;
+        }
+               
+
+
     }
 }
