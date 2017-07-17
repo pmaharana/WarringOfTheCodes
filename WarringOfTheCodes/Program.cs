@@ -306,13 +306,74 @@ namespace WarringOfTheCodes
             //Console.WriteLine((decimal)neg/n);
             //Console.WriteLine((decimal)zero/n);
 
-            var testing = Arsene.Tribonacci(new double[] { 1, 1, 1 }, 10);
-            foreach (var item in testing)
-            {
-                Console.Write($"{item} ");
-            }
-          
-            Console.ReadLine();
+
+            string val = "i should have known that you would have a perfect answer for me!!!";
+            
+            var eve = CaesarCipher.CharConvert(val);
+            var ascii = new List<int>();
+            var asciiToChar = new List<char>();
+            //int h = 5;
+            //foreach (var c in eve)
+            //{
+            //    if (c == ' ')
+            //    {
+            //        ascii.Add(32);
+            //    }
+            //    else
+            //    {
+
+            //        if (c + h > 122 || c + h < 97)
+            //        {
+            //            var x = 122 - c;
+            //            ascii.Add(97 - x + h - 1);
+            //        }
+            //        else
+            //        {
+
+            //        ascii.Add(c + h);
+            //        }
+            //    }
+            //}
+            //int shift = 1;
+            //for (int i = 0; i < val.Length; i++)
+            //{
+            //    var c = eve[i];
+            //    var increment = i + shift;
+
+            //    if (!char.IsLetter(c))
+            //    {
+            //        ascii.Add(c);
+            //    }
+            //    else if (char.IsLower(eve[i]))
+            //    {
+            //        if (c + increment > 122 || c + increment < 97)
+            //        {
+
+            //            ascii.Add(c + increment - 26);
+            //        }
+            //        else
+            //        {
+            //            ascii.Add(c + increment);
+            //        }
+
+            //    }
+
+
+            //}
+
+            //foreach (var c in ascii)
+            //{
+            //    asciiToChar.Add((char)c);
+            //}
+
+            //eve.ForEach(f => Console.Write(f));
+            //Console.WriteLine();
+            //Console.WriteLine();
+            //asciiToChar.ForEach(f => Console.Write(f));
+
+            //Console.ReadLine();
+
+            Console.WriteLine(Thanatos.super_reduced_string("baab"));
         }
     }
 }

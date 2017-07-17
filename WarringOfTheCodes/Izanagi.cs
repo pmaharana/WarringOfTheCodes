@@ -119,5 +119,13 @@ namespace WarringOfTheCodes
             return rv;
         }
 
+        public static string Covfefe(string tweet)
+        {
+            string rv = "";
+
+            return tweet.ToLower().Contains("coverage") ? rv = Regex.Replace(tweet, "coverage", "covfefe") : tweet + " covfefe";
+
+        }
+
     }
 }

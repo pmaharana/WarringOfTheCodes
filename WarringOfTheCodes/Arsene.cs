@@ -151,5 +151,34 @@ namespace WarringOfTheCodes
             return n == 0 ? new double[] { 0 } : res;
         }
 
+        public static string Rps(string p1, string p2)
+        {
+            if (p1 == p2)
+            {
+                return "Draw!";
+            }
+            else if (p1 == "rock" && p2 == "scissors" ||
+                 p1 == "scissors" && p2 == "paper" || 
+                 p1 == "paper" && p2 == "rock")
+            {
+                return "Player 1 Won!";
+            }
+            else
+            {
+                return "Player 2 Won!";
+            }
+        }
+
+        public static string RpsU(string p1, string p2)
+        {
+            return p1 == p2 ? "Draw!" :
+                          (p1 == "rock" && p2 == "scissors" || p1 == "scissors" && p2 == "paper" || p1 == "paper" && p2 == "rock")
+                          ? "Player 1 won!" : "Player 2 won!";
+        }
+
+        private static readonly HashSet<string> map = new HashSet<string> { "scissorspaper", "paperrock", "rockscissors" };
+
+        public string RpsAh(string p1, string p2) => p1 == p2 ? "Draw!" : map.Contains(p1 + p2) ? "Player 1 won!" : "Player 2 won!";
+
     }
 }
