@@ -373,7 +373,7 @@ namespace WarringOfTheCodes
 
             //Console.ReadLine();
 
-            Console.WriteLine(Thanatos.HackerRankInString("shereiamstackerranksystem"));
+            var test = Thanatos.getRecord(new int[] { 3, 4, 21, 36, 10, 28, 35, 5, 24, 42});
         }
     }
 }

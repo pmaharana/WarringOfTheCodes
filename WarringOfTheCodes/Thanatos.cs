@@ -59,7 +59,28 @@ namespace WarringOfTheCodes
             }
             return rv;
         }
-               
+     
+        public static int[] getRecord(int[] s)
+        {
+            var highRecord = 0;
+            var lowRecord = 0;
+            var maxNum = s[0];
+            var minNum = s[0];
+            for (int i = 1; i < s.Length; i++)
+            {
+                if (s[i] > maxNum)
+                {
+                    maxNum = s[i];
+                    highRecord++;
+                }
+                if (s[i] < minNum)
+                {
+                    minNum = s[i];
+                    lowRecord++;
+                }
+            }
+            return new int[] { highRecord, lowRecord };
+        }
 
 
     }
