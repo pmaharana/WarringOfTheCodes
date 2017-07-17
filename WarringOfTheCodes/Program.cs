@@ -373,7 +373,7 @@ namespace WarringOfTheCodes
 
             //Console.ReadLine();
 
-            var test = Thanatos.getRecord(new int[] { 3, 4, 21, 36, 10, 28, 35, 5, 24, 42});
+            Console.WriteLine(Thanatos.AverageString("seven, seven, cyfxhy, nine, eight, cyfxhy, eight"));
         }
     }
 }
