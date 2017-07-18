@@ -373,7 +373,9 @@ namespace WarringOfTheCodes
 
             //Console.ReadLine();
 
-            Console.WriteLine(Thanatos.AverageString("seven, seven, cyfxhy, nine, eight, cyfxhy, eight"));
+            Console.WriteLine(Thanatos.IsAlt("banana"));
+
+
         }
     }
 }

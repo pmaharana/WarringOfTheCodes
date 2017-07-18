@@ -108,7 +108,22 @@ namespace WarringOfTheCodes
             return rv;
         }
 
-
+        public static bool IsAlt(string word)
+        {
+            var input = word.ToLower();
+            var vowel = "aeiou";
+            var rv = 0;
+            //var alternates = word.Where((w, i) => i % 2 == 0).ToList();
+            //foreach (var x in alternates)
+            //{
+            //    if (vowel.Contains(x))
+            //    {
+            //        rv++;
+            //    }
+            //}
+            //return alternates.Count() == rv;
+           var startIndex = input.First(f => input.IndexOf())
+        }
 
 
 
