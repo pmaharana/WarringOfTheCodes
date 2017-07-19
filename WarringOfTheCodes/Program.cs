@@ -373,7 +373,11 @@ namespace WarringOfTheCodes
 
             //Console.ReadLine();
 
+            
+            Console.WriteLine(Thanatos.IsAlt("amazon"));
+            Console.WriteLine(Thanatos.IsAlt("apple"));
             Console.WriteLine(Thanatos.IsAlt("banana"));
+            Console.ReadLine();
 
 
         }

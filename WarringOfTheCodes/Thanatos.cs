@@ -112,20 +112,37 @@ namespace WarringOfTheCodes
         {
             var input = word.ToLower();
             var vowel = "aeiou";
-            var rv = 0;
-            //var alternates = word.Where((w, i) => i % 2 == 0).ToList();
-            //foreach (var x in alternates)
-            //{
-            //    if (vowel.Contains(x))
-            //    {
-            //        rv++;
-            //    }
-            //}
-            //return alternates.Count() == rv;
-           var startIndex = input.First(f => input.IndexOf())
+            var rv = true;
+            int Vowel(char x)
+            {
+                return vowel.Contains(x) ? 1 : 0;
+            }
+
+            for (int i = 1; i < input.Length; i++)
+            {
+                if (Vowel(input[i])  == Vowel(input[i - 1]))
+                {
+                    rv = false;
+                }
+
+            }
+
+            return rv;
+          
         }
 
-
+        //var startChar = input.First(f => vowel.Contains(f.ToString()));
+        //var firstIndex = input.IndexOf(startChar);
+        //var testString = input.Substring(firstIndex);
+        //var everyOther = testString.Where((t, i) => (i % 2) == 0).ToList();
+        //foreach (var x in everyOther)
+        //{
+        //    if (vowel.Contains(x))
+        //    {
+        //        rv++;
+        //    }
+        //}
+        //return everyOther.Count() == rv;
 
 
     }
