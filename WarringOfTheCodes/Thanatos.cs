@@ -27,7 +27,7 @@ namespace WarringOfTheCodes
 
         public static string UnlockU(string str) => string.Join("", str.ToLower().
             Select(x => _keys[26 + _keys.IndexOf(x)]));
-         
+
         public static string super_reduced_string(string s)
         {
             string toCheck = "(.)\\1";
@@ -35,12 +35,12 @@ namespace WarringOfTheCodes
             while (Regex.IsMatch(rv, toCheck))
             {
 
-            rv = Regex.Replace(rv, toCheck, "");
+                rv = Regex.Replace(rv, toCheck, "");
             }
             return rv.Length > 0 ? rv : "Empty String";
         }
 
-       public static string HackerRankInString(string s)
+        public static string HackerRankInString(string s)
         {
             var x = s.ToLower();
             var check = "hackerrank".ToList();
@@ -48,7 +48,7 @@ namespace WarringOfTheCodes
 
             for (int i = 0; i < s.Length; i++)
             {
-                if (check.Count> 0)
+                if (check.Count > 0)
                 {
                     if (x[i] == check[0])
                     {
@@ -59,7 +59,7 @@ namespace WarringOfTheCodes
             }
             return rv;
         }
-     
+
         public static int[] getRecord(int[] s)
         {
             var highRecord = 0;
@@ -120,7 +120,7 @@ namespace WarringOfTheCodes
 
             for (int i = 1; i < input.Length; i++)
             {
-                if (Vowel(input[i])  == Vowel(input[i - 1]))
+                if (Vowel(input[i]) == Vowel(input[i - 1]))
                 {
                     rv = false;
                 }
@@ -128,7 +128,7 @@ namespace WarringOfTheCodes
             }
 
             return rv;
-          
+
         }
 
         //var startChar = input.First(f => vowel.Contains(f.ToString()));
@@ -144,6 +144,18 @@ namespace WarringOfTheCodes
         //}
         //return everyOther.Count() == rv;
 
+        public static int Solution(int value)
+        {
+            var rv = new List<int>();
+            for (int i = 0; i < value; i++)
+            {
+                if (i % 3 == 0 || i % 5 == 0)
+                {
+                    rv.Add(i);
+                }
+            }
+            return rv.Sum();
+        }
 
     }
 }
