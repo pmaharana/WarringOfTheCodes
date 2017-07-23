@@ -157,5 +157,18 @@ namespace WarringOfTheCodes
             return rv.Sum();
         }
 
+        public static int FindDeletedNumber(List<int> startingList, List<int> mixedList)
+        {
+            var rv = 0;
+            foreach (var number in startingList)
+            {
+                if (!mixedList.Contains(number))
+                {
+                    rv = number;
+                }
+            }
+            return rv;
+        }
+
     }
 }
