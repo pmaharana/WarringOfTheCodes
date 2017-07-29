@@ -170,5 +170,41 @@ namespace WarringOfTheCodes
             return rv;
         }
 
+        public static int CountSmileys(string[] smileys)
+        {
+            var eyes = ":;";
+            var mouth = "D)";
+            var rv = 0;
+            if (smileys.ToList().Count() > 0)
+            {
+                for (int i = 0; i < smileys.Length; i++)
+                {
+                    if (smileys[i].Length <= 1)
+                    {
+                        rv += 0;
+                    }
+                    else if (smileys[i].Length < 3)
+                    {
+                        if (eyes.Contains(smileys[i][0]) && mouth.Contains(smileys[i][1]))
+                        {
+                            rv++;
+                        }
+
+                    }
+                    else
+                    {
+                        if (eyes.Contains(smileys[i][0]) && mouth.Contains(smileys[i][2]))
+                        {
+                            rv++;
+                        }
+                    }
+                }
+            }
+
+            return rv > 0 ? rv : 0;
+
+
+        }
+
     }
 }

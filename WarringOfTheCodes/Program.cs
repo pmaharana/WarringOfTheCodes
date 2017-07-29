@@ -372,14 +372,9 @@ namespace WarringOfTheCodes
             //asciiToChar.ForEach(f => Console.Write(f));
 
             //Console.ReadLine();
-
-            
-            Console.WriteLine(Thanatos.IsAlt("amazon"));
-            Console.WriteLine(Thanatos.IsAlt("apple"));
-            Console.WriteLine(Thanatos.IsAlt("banana"));
-            Console.ReadLine();
-
-
+            string tart = "tart";
+            Console.WriteLine(Shiva.BandNameGenerator("tart"));
+            Console.WriteLine(tart.Substring(tart.Length-1));
         }
     }
 }
