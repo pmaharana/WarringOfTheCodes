@@ -372,9 +372,7 @@ namespace WarringOfTheCodes
             //asciiToChar.ForEach(f => Console.Write(f));
 
             //Console.ReadLine();
-            string tart = "tart";
-            Console.WriteLine(Shiva.BandNameGenerator("tart"));
-            Console.WriteLine(tart.Substring(tart.Length-1));
+            Console.WriteLine(Shiva.DuplicateCount("abcde"));
         }
     }
 }

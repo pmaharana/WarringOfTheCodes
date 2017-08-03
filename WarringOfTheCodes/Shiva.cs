@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace WarringOfTheCodes
 {
@@ -36,10 +37,19 @@ namespace WarringOfTheCodes
     {
         public static string BandNameGenerator(string str)
         {
-            var rv = "";
             var the = "The ";
             var modified = str.Substring(0, 1).ToUpper() + str.Substring(1, str.Length - 1);
             return String.Equals(str.Substring(0, 1), str.Substring(str.Length - 1)) ?  modified + str : the + modified;
+        }
+
+        public static int DuplicateCount(string str)
+        {
+            //var dist = str.ToLower().Distinct();
+            //var laffo = dist.Count(x => str.ToLower().Contains(x))
+            //return 1;
+            return str.ToLower().Distinct().Select(x => str.ToLower()
+                .Count(c => c == x)).Where(w => w > 1).Count();
+           
         }
 
     }
